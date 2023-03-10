@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title></title>
+<style> *{font-size: 20pt;} </style>
+
+<script>
+   let cat = new Array(
+    './img/1.gif',  './img/2.gif', './img/3.gif',  './img/4.gif', 
+    './img/5.gif',  './img/6.gif', './img/7.gif',  './img/8.gif', 
+    './img/9.gif',  './img/10.gif', './img/11.gif', './img/12.gif', 
+    './img/13.gif', './img/14.gif', './img/15.gif', './img/blink.gif'
+   );
+
+   let order = new Array();
+   let blink = 0;
+function start(){
+    for(let i = 0; i<16; i++){
+        order[i]=Math.floor(Math.random()*16);
+        for(let j = 0; j<i; j++){
+            if(order[i]==order[j]){i--;continue;}
+        }
+    }
+    mix();
+}
+
+function mix(){
+    for(let a =0; a<16; a++){
+        document.images[a].src=cat[order[a]];
+        if(order[a]==15){blink=a}
+    }
+}
+function move(k){
+    // alert(k + '번째 그림입니다');
+    let gap =Math.abs(blink-k);
+    if(gap==1 || gap==4){
+        let temp = order[k];
+        order[k] = order[blink];
+        order[blink] = temp;
+        mix();
+    }
+}    
+
+   //390페이지 
+</script>
+</head>
+<body>
+    <h2>고양이퍼즐-구름빵</h2>
+    <button onclick="">퍼즐시작</button>
+    <script>
+        let imgsource = [ 'img/1.gif',  'img/2.gif', 'img/3.gif',  'img/4.gif', 
+                     'img/5.gif',  'img/6.gif', 'img/7.gif',  'img/8.gif', 
+                     'img/9.gif',  'img/10.gif', 'img/11.gif', 'img/12.gif', 
+                     'img/13.gif', 'img/14.gif', 'img/15.gif', 'img/16.gif'
+                    ];
+        for(let i = 0; i<16; i++){
+            if(i%4==0){document.write('<br>')}
+            document.write("<img src =" + imgsource[i] + " border=1 onclick=move("+i+")>")
+
+        }
+    </script>
+
+    
+    
+    
+</body>
+</html>

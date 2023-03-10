@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{ font-size: 20pt;} </style>
+<script>
+    //test07.html
+    let key=1234; //전역변수=필드=field
+    let Gtotal = 0; //멤버변수=전역변수=필드=field
+    let flag = false;
+    function aaa(userId){ //메소드=method=함수=펑션=프로시저=procedure=define=정의=구현
+    //    let aa= alert('길동 178');
+            alert('이름은 ' + userId);
+    }//end
+    document.getElementById('display').innerHTML= aa;
+    function bbb(kor, eng){ //메소드=method=함수=펑션=프로시저=procedure=def=정의=구현
+        // alert('aa함수펑션입니다')
+            alert('첫번째 값 ' + kor + '두번째 값 ' + eng);
+
+    }//end
+    function ccc(x, y, z){ //메소드=method=함수=펑션=프로시저=procedure=def=정의=구현
+        // alert('aa함수펑션입니다')
+            alert('이름 ' + x + ' 수학 ' + y + ' 컴퓨터 ' + z);
+
+    }//end
+</script>
+</head>
+<body>
+    <h2>test07.html</h2>
+    <button onclick="aaa('길동')">aaa함수호출</button>
+    <button onclick="bbb(3,4)">bbb함수호출</button>
+    <button onclick="ccc('길동',90,85)">ccc함수호출 길동 90 85</button>
+    <div id="display"></div>
+</body>
+</html>

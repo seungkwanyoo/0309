@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{ font-size: 20pt;} </style>
+<script>
+    //test08.html
+    function price(){ //리턴값0
+        let m = 9300;
+        return m;
+
+    }//end
+    function note(){ //매개인자x,리턴값x
+        //m값 받아서 cost기억 500미만이면*2, 500이상은 0.1곱하기
+        // let cost= price(); //단독기술은 의미가 없어요
+        let value = price();
+        let data=0;
+        if(value>=500){data = value*2}
+        else{data = value*0.1}
+        // alert('가격=' + price()*0.1);
+        // alert('가격=' + cost*0.1);
+        alert('최종가격=' + data);
+        
+    }//end
+
+    function mytest(a,b){ //매개인자만 있는경우
+        alert(a+' '+b);
+    }//end
+</script>
+</head>
+<body>
+    <h2> test08.html </h2>
+    <button onclick="note()">note함수호출</button>
+    <button onclick="mytest(4,5)">mytest함수호출</button>
+    <div id="display"></div>
+</body>
+</html>

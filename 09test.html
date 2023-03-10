@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<style> *{ font-size: 20pt;} </style>
+<script>
+    //test09.html
+    function mycal(){
+        let x=4;
+        let y=5;
+        let hap=x+y;
+        return hap; //9숫자 데이터를 mycal함수이름기억
+    }//end
+
+    function start(){
+        let data = mycal();
+        alert('결과값 ' + data);
+    }//end
+</script>
+</head>
+<body>
+    <h2> test09.html </h2>
+    <button onclick="mycal(4,5)">mycal함수호출</button>
+    <button onclick="start()">start함수호출</button>
+    <div id="display"></div>
+</body>
+</html>
